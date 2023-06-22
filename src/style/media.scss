@@ -1,0 +1,37 @@
+@media screen and (min-width: 1800px) {
+
+	.title {
+		font-size: 4rem;
+	}
+
+	.main {
+
+			&__input-box {
+				padding: 15px 15px 15px 15px;
+				margin: 0px 0px 20px 0px;
+			}
+	
+			&__btn {
+				width: 60px;
+				height: 60px;;
+			}
+	
+			&__buttons {
+				margin: 50px 0px 0px 0px;
+			}
+	
+			&__card-title {
+				font-size: 4rem;
+			}
+	}
+	.btn {
+		font-size: 3rem;
+		background-color: rgb(148, 145, 145);
+		transition-duration: 0.5s;
+	}
+	
+	.input {
+		font-size: 3rem;
+	}
+
+}
