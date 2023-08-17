@@ -1,2 +1,3 @@
 # calculator
-https://bhdns.github.io/calculator/dist/index.html
+
+[Calculator](https://bhdns.github.io/calculator/dist/index.html)
