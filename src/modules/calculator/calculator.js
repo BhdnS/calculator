@@ -1,22 +1,43 @@
-import { addition, multiplication, separation, subtraction } from './utilsCalculator'
+export default class Calculator {
+  constructor() {
+    this.add = document.querySelector('#add');
+    this.sub = document.querySelector('#sub');
+    this.mult = document.querySelector('#mult');
+    this.divided = document.querySelector('#divided');
+    this.output = document.querySelector('#output');
+    this.numOne = document.querySelector('#num-one');
+    this.numTwo = document.querySelector('#num-two');
+  }
 
-export class Calculator {
-	constructor(options) {
-		this.add = options.add;
-		this.sub = options.sub;
-		this.mult = options.mult;
-		this.divided = options.divided;
-		this.output = options.output;
-		this.numOne = options.numOne;
-		this.numTwo = options.numTwo;
-	}
+  addition() {
+    this.add.addEventListener('click', () => {
+      const result = +this.numOne.value + +this.numTwo.value;
+      this.#innerResult(result);
+    });
+  }
 
-	addition() { addition(this.add, this.numOne, this.numTwo) }
+  subtraction() {
+    this.sub.addEventListener('click', () => {
+      const result = +this.numOne.value - +this.numTwo.value;
+      this.#innerResult(result);
+    });
+  }
 
-	subtraction() { subtraction(this.sub, this.numOne, this.numTwo) }
+  multiplication() {
+    this.mult.addEventListener('click', () => {
+      const result = +this.numOne.value * +this.numTwo.value;
+      this.#innerResult(result);
+    });
+  }
 
-	multiplication() { multiplication(this.mult, this.numOne, this.numTwo) }
+  separation() {
+    this.divided.addEventListener('click', () => {
+      const result = +this.numOne.value / +this.numTwo.value;
+      this.#innerResult(result);
+    });
+  }
 
-	separation() { separation(this.divided, this.numOne, this.numTwo) }
-
+  #innerResult(result) {
+    this.output.innerHTML = `<p>${result}</p>`;
+  }
 }
